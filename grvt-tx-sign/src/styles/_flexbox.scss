@@ -1,0 +1,147 @@
+.fx {
+  display: flex;
+
+  &-1 {
+    flex: 1;
+  }
+
+  &-extend {
+    flex: 1 1 auto;
+  }
+
+  $flex-direction-values: column-reverse, row, row-reverse, column;
+  @each $flex-direction in $flex-direction-values {
+    &-#{$flex-direction} {
+      display: flex;
+      flex-direction: $flex-direction;
+    }
+  }
+
+  &-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-center-between {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  $flex-wrap-values: wrap, nowrap, revert, wrap-reverse;
+  @each $flex-wrap in $flex-wrap-values {
+    &-wrap-#{$flex-wrap} {
+      flex-wrap: $flex-wrap;
+    }
+  }
+
+  $align-content-values: center, start, end, flex-start, flex-end, baseline, space-between, space-around, space-evenly, stretch;
+  @each $align-content in $align-content-values {
+    &-ac-#{$align-content} {
+      align-content: $align-content;
+    }
+  }
+
+  $align-items-values: normal, stretch, center, start, end, flex-start, flex-end, baseline;
+  @each $align-items in $align-items-values {
+    &-ai-#{$align-items} {
+      align-items: $align-items;
+    }
+  }
+
+  $align-self-values: auto, normal, center, start, end, self-start, self-end, flex-start, flex-end, baseline, stretch;
+  @each $align-self in $align-self-values {
+    &-as-#{$align-self} {
+      align-self: $align-self;
+    }
+  }
+
+  $justify-content-values: center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch;
+  @each $justify-content in $justify-content-values {
+    &-jc-#{$justify-content} {
+      justify-content: $justify-content !important;
+    }
+  }
+
+  $justify-items-values: auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right;
+  @each $justify-items in $justify-items-values {
+    &-ji-#{$justify-items} {
+      justify-items: $justify-items;
+    }
+  }
+
+  $justify-self-values: auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right;
+  @each $justify-self in $justify-self-values {
+    &-js-#{$justify-self} {
+      justify-self: $justify-self;
+    }
+  }
+}
+
+.i-fx {
+  display: inline-flex;
+
+  &-1 {
+    flex: 1;
+  }
+
+  &-extend {
+    flex: 1 1 auto;
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+
+  $flex-wrap-values: wrap, nowrap, revert, wrap-reverse;
+  @each $flex-wrap in $flex-wrap-values {
+    &-wrap-#{$flex-wrap} {
+      flex-wrap: $flex-wrap;
+    }
+  }
+
+  $align-content-values: center, start, end, flex-start, flex-end, baseline, space-between, space-around, space-evenly, stretch;
+  @each $align-content in $align-content-values {
+    &-ac-#{$align-content} {
+      align-content: $align-content;
+    }
+  }
+
+  $align-items-values: normal, stretch, center, start, end, flex-start, flex-end, baseline;
+  @each $align-items in $align-items-values {
+    &-ai-#{$align-items} {
+      align-items: $align-items;
+    }
+  }
+
+  $align-self-values: auto, normal, center, start, end, self-start, self-end, flex-start, flex-end, baseline, stretch;
+  @each $align-self in $align-self-values {
+    &-as-#{$align-self} {
+      align-self: $align-self;
+    }
+  }
+
+  $justify-content-values: center, start, end, flex-start, flex-end, left, right, normal, space-between, space-around, space-evenly, stretch;
+  @each $justify-content in $justify-content-values {
+    &-jc-#{$justify-content} {
+      justify-content: $justify-content;
+    }
+  }
+
+  $justify-items-values: auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right;
+  @each $justify-items in $justify-items-values {
+    &-ji-#{$justify-items} {
+      justify-items: $justify-items;
+    }
+  }
+
+  $justify-self-values: auto, normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, left, right;
+  @each $justify-self in $justify-self-values {
+    &-js-#{$justify-self} {
+      justify-self: $justify-self;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+$spacers: (
+  auto: auto,
+  0: 0,
+  0\.5: #{(0.5 * 4)}px,
+  1: #{(1 * 4)}px,
+  2: #{(2 * 4)}px,
+  3: #{(3 * 4)}px,
+  4: #{(4 * 4)}px,
+  5: #{(5 * 4)}px,
+  6: #{(6 * 4)}px,
+  7: #{(7 * 4)}px,
+  8: #{(8 * 4)}px,
+  9: #{(9 * 4)}px,
+  10: #{(10 * 4)}px,
+  12: #{(12 * 4)}px,
+  16: #{(16 * 4)}px,
+);
+@each $size, $length in $spacers {
+  .gap-#{$size} {
+    gap: $length !important;
+  }
+  .round-#{$size} {
+    border-radius: $length;
+  }
+
+  .p-#{$size}, .pa-#{$size} {
+    padding: $length !important;
+  }
+  .px-#{$size} {
+    padding-left: $length !important;
+    padding-right: $length !important;
+  }
+  .py-#{$size} {
+    padding-top: $length !important;
+    padding-bottom: $length !important;
+  }
+  .pt-#{$size} {
+    padding-top: $length !important;
+  }
+  .pr-#{$size} {
+    padding-right: $length !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: $length !important;
+  }
+  .pl-#{$size} {
+    padding-left: $length !important;
+  }
+
+  .m-#{$size}, .ma-#{$size} {
+    margin: $length !important;
+  }
+  .mx-#{$size} {
+    margin-left: $length !important;
+    margin-right: $length !important;
+  }
+  .my-#{$size} {
+    margin-top: $length !important;
+    margin-bottom: $length !important;
+  }
+  .mt-#{$size} {
+    margin-top: $length !important;
+  }
+  .mr-#{$size} {
+    margin-right: $length !important;
+  }
+  .mb-#{$size} {
+    margin-bottom: $length !important;
+  }
+  .ml-#{$size} {
+    margin-left: $length !important;
+  }
+  .b-#{$size} {
+    bottom: $length !important;
+  }
+}
