@@ -2,24 +2,22 @@
 
 ## Getting Started
 
-### Environment variables
-
-```bash
-cp .env.example .env
-```
-
 ### Install dependencies
 
 ```bash
 npm install
 ```
 
-## Bootstrap development server
+### Private key
 
-First, run the development server:
+Open [`index.ts`](index.ts#L65) and replace the `PRIVATE_KEY` variable with your private key.
+
+## Execute sign script
 
 ```bash
 npm run start
 ```
 
-Open [http://localhost:3100](http://localhost:3100) with your browser to see the result.
+## Expected output
+
+![output](snapshot/sign-result.png)
