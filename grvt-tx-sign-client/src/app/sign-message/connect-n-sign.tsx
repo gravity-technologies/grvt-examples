@@ -42,20 +42,11 @@ const decode = (signature: string): ISignature => {
   }
 }
 
-
-const random = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-const randomUint32 = () => {
-  return random(1, 2 ** 31 - 1)
-}
-
 /**
  * END: Utility functions
  */
 
-const nonce = randomUint32()
+const nonce = 720948655
 
 export const ConnectAndSign = () => {
   const { connectAsync, connectors, error } = useConnect()
@@ -104,7 +95,7 @@ export const ConnectAndSign = () => {
           (byte: number) => ('0' + (byte & 0xFF).toString(16)).slice(-2)
         ).join(''),
         signature,
-        signatureDecoded: decode(signature)
+        decoded: decode(signature)
       })
 
       // const verifySignature = signVerify(variables as any)
