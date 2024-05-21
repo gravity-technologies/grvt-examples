@@ -62,7 +62,7 @@ class Signature {
 }
 
 // fill in your private key
-const PRIVATE_KEY = '81c6cf2eb85594757bf357cb29389d0cf06a23d5480ecf97a5057d73456fb48e'
+const PRIVATE_KEY = '81c...[REPLACE_BY_YOUR_PRIVATE]'
 const privateKeyHex = `0x${PRIVATE_KEY}`
 
 // define the message/payload
