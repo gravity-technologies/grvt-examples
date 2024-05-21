@@ -86,12 +86,12 @@ export const ConnectAndSign = () => {
   // debug
   useEffect(() => {
     if (signature) {
-      const dataHash = TypedDataUtils.eip712Hash(variables as any, SignTypedDataVersion.V4)
+      const messageHash = TypedDataUtils.eip712Hash(variables as any, SignTypedDataVersion.V4)
       console.log('Signed', {
         payload: variables,
-        dataHash,
-        dataHashStr: Array.from(
-          dataHash,
+        messageHash,
+        messageHashAsString: Array.from(
+          messageHash,
           (byte: number) => ('0' + (byte & 0xFF).toString(16)).slice(-2)
         ).join(''),
         signature,

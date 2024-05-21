@@ -1,4 +1,4 @@
-import { SignTypedDataVersion, signTypedData } from '@metamask/eth-sig-util'
+import { SignTypedDataVersion, TypedDataUtils, signTypedData } from '@metamask/eth-sig-util'
 
 /**
  * EIP-712 Typed Data
@@ -62,7 +62,7 @@ class Signature {
 }
 
 // fill in your private key
-const PRIVATE_KEY = '81c...[REPLACE_BY_YOUR_PRIVATE]'
+const PRIVATE_KEY = '81c6cf2eb85594757bf357cb29389d0cf06a23d5480ecf97a5057d73456fb48e'
 const privateKeyHex = `0x${PRIVATE_KEY}`
 
 // define the message/payload
@@ -77,6 +77,13 @@ const signPayload = {
 
 console.log('------------------')
 console.log('message', signPayload)
+console.log('------------------')
+
+const messageHash = TypedDataUtils.eip712Hash(signPayload as any, SignTypedDataVersion.V4)
+
+console.log('------------------')
+console.log('messageHash:', messageHash)
+console.log('messageHashAsString:', Array.from(messageHash, (byte: number) => ('0' + (byte & 0xFF).toString(16)).slice(-2)).join(''))
 console.log('------------------')
 
 // sign the payload
