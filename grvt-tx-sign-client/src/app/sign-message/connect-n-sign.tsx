@@ -71,7 +71,7 @@ export const ConnectAndSign = () => {
   const signPayload = useMemo(() => ({
     ...CreateAccount,
     message: {
-      accountID: account.address,
+      accountID: '0x5E4c35548e7057274057388bcf10aff5E3AddC09',
       nonce: String(nonce)
     }
   } as any), [account.address])
