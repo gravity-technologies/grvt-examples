@@ -1,5 +1,5 @@
 ## Description
-There are 2 test cases in this exm
+There are 2 test cases in this example
 - `TestWithPrivateKey`:
   - Generate a private key, sign a message, and recover the address from the signature
   - PASSED
