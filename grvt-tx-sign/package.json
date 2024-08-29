@@ -14,11 +14,12 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@metamask/eth-sig-util": "^7.0.2",
-    "@typechain/ethers-v5": "^11.1.2",
-    "ethers": "^6.12.1"
+    "ethers": "^6.12.1",
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
+    "@types/prompts": "^2.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
