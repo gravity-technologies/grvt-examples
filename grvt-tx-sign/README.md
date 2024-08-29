@@ -10,7 +10,7 @@ npm install
 
 ### Private key
 
-Open [`index.ts`](index.ts#L65) and replace the `PRIVATE_KEY` variable with your private key.
+You can find and replace the `PRIVATE_KEY` variable with your private key.
 
 ## Execute sign script
 
