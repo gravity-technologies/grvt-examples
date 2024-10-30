@@ -2,10 +2,12 @@ import path from 'path';
 import prompts from 'prompts';
 import CreateAccount from './CreateAccount';
 import Transfer from './Transfer';
+import TransferExternal from './TransferExternal';
 
 const methods = {
   CreateAccount,
   Transfer,
+  TransferExternal,
 }
 
 const selectMethods = async () => {
@@ -25,9 +27,12 @@ const selectMethods = async () => {
   return response.method as keyof typeof methods
 }
 
-selectMethods().then((method) => {
+selectMethods().then(async (method) => {
   console.log(`Executing ${method}`)
-  methods[method]()
+  const result = methods[method]() as Promise<any> | void
+  if (result instanceof Promise) {
+    await result.catch((error) => console.error(error.message))
+  }
   console.log('Open this file to see full script:', path.join(process.cwd(), `${method}.ts`))
   process.exit(0)
 })
