@@ -10,11 +10,12 @@
     "start": "ts-node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Danh Le <danh@grvt.io>",
   "license": "UNLICENSED",
   "dependencies": {
     "@metamask/eth-sig-util": "^7.0.2",
     "ethers": "^6.12.1",
+    "grvt": "^1.2.9",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
